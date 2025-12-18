@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 15%;
+
+    --primary: 142 60% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 30% 95%;
+    --secondary-foreground: 142 60% 25%;
+
+    --muted: 142 20% 96%;
+    --muted-foreground: 150 10% 40%;
+
+    --accent: 142 40% 90%;
+    --accent-foreground: 142 60% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 142 20% 88%;
+    --input: 142 20% 88%;
+    --ring: 142 60% 35%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 150 10% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 150 10% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 150 10% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 142 50% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 30% 15%;
+    --secondary-foreground: 142 30% 85%;
+
+    --muted: 142 20% 15%;
+    --muted-foreground: 150 10% 60%;
+
+    --accent: 142 30% 20%;
+    --accent-foreground: 142 30% 85%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 142 20% 20%;
+    --input: 142 20% 20%;
+    --ring: 142 50% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
